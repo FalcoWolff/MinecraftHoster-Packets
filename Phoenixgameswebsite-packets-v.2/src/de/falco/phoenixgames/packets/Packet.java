@@ -9,6 +9,8 @@ package de.falco.phoenixgames.packets;
  */
 public abstract class Packet {
 	
+	
+	
 	private final int packetid;
 	
 	public Packet(int packetid) {
