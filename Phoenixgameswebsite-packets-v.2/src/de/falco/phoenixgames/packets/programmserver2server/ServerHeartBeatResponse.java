@@ -5,28 +5,25 @@ import de.falco.phoenixgames.packets.ProgrammServerPacketCode;
 
 public class ServerHeartBeatResponse extends Packet{
 
-	private long usage;
+	private long space;
 	private long ram;
+	private float cpu;
 	
-	public ServerHeartBeatResponse(long usage, long ram) {
+	public ServerHeartBeatResponse(long space, long ram, float cpu) {
 		super(ProgrammServerPacketCode.serverheartbeatresponse);
-		this.usage = usage;
+		this.space = space;
 		this.ram = ram;
+		this.cpu = cpu;
 	}
 	
 	
 	public long getRam() {
 		return ram;
 	}
-	public long getUsage() {
-		return usage;
+	public float getCpu() {
+		return cpu;
 	}
-	
-	
-	public void setRam(long ram) {
-		this.ram = ram;
-	}
-	public void setUsage(long usage) {
-		this.usage = usage;
+	public long getSpace() {
+		return space;
 	}
 }
