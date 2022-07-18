@@ -2,7 +2,6 @@ package de.falco.phoenixgames.packets.sender;
 
 public class ProgrammServerSender extends Sender{
 	
-	
 	private int programmserverid;
 	
 	public ProgrammServerSender(int programmserverid) {

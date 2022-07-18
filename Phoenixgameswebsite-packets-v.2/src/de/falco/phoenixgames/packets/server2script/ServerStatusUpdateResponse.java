@@ -2,27 +2,17 @@ package de.falco.phoenixgames.packets.server2script;
 
 import de.falco.phoenixgames.packets.Packet;
 import de.falco.phoenixgames.packets.ScriptClientPacketCode;
+import de.falco.phoenixgames.packets.util.ServerUpdateStatus;
 
 public class ServerStatusUpdateResponse extends Packet{
 
-	private ServerStatusUpdateResponseStatus ServerUpdate;
+	private ServerUpdateStatus status;
 	private int serverid;
 	
-	public ServerStatusUpdateResponse(int serverid, ServerStatusUpdateResponseStatus status) {
+	public ServerStatusUpdateResponse(int serverid, ServerUpdateStatus status) {
 		super(ScriptClientPacketCode.serverstatusupdateresponse);
-		this.ServerUpdate = status;
+		this.status = status;
 		this.serverid = serverid;
-	}
-	
-	public enum ServerStatusUpdateResponseStatus {
-		success,nopermission,nochange,restarting,hostdown;
-	}
-	
-	public ServerStatusUpdateResponseStatus getServerStatus() {
-		return ServerUpdate;
-	}
-	public void setServerStatus(ServerStatusUpdateResponseStatus serverStatus) {
-		ServerUpdate = serverStatus;
 	}
 	
 	public int getServerid() {
@@ -31,8 +21,12 @@ public class ServerStatusUpdateResponse extends Packet{
 	public void setServerid(int serverid) {
 		this.serverid = serverid;
 	}
-	public void setServerUpdate(ServerStatusUpdateResponseStatus serverUpdate) {
-		ServerUpdate = serverUpdate;
+	
+	public ServerUpdateStatus getStatus() {
+		return status;
+	}
+	public void setStatus(ServerUpdateStatus status) {
+		this.status = status;
 	}
 
 }

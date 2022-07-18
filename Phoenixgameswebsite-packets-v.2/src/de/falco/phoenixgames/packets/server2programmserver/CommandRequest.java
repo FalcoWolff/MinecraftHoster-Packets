@@ -10,8 +10,6 @@ public class CommandRequest extends Packet{
 	private String cmd;
 	private String debugmessage;
 	
-	
-	
 	public CommandRequest(Sender sender, String cmd, String debugmessage) {
 		super(ProgrammServerPacketCode.commandrequest);
 		this.cmd = cmd;

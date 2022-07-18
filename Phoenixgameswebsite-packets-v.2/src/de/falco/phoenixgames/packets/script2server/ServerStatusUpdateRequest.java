@@ -2,21 +2,21 @@ package de.falco.phoenixgames.packets.script2server;
 
 import de.falco.phoenixgames.packets.Packet;
 import de.falco.phoenixgames.packets.ScriptClientPacketCode;
-import de.falco.console.pexsystem.ServerStatus;
+import de.falco.phoenixgames.packets.util.ServerCommand;
 
 public class ServerStatusUpdateRequest extends Packet{
 
-	private ServerStatus ServerStatus;
+	private ServerCommand serverCommand;
 	private int serverid;
 	
-	public ServerStatusUpdateRequest(int serverid, ServerStatus status) {
+	public ServerStatusUpdateRequest(int serverid, ServerCommand serverCommand) {
 		super(ScriptClientPacketCode.serverstatusupdaterequest);
-		this.ServerStatus = status;
+		this.serverCommand = serverCommand;
 		this.serverid = serverid;
 	}
 	
-	public ServerStatus getServerStatus() {
-		return ServerStatus;
+	public ServerCommand getServerCommand() {
+		return serverCommand;
 	}
 	
 	public int getServerid() {

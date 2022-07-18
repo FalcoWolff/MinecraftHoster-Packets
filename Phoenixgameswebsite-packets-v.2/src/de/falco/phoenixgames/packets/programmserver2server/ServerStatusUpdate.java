@@ -2,7 +2,7 @@ package de.falco.phoenixgames.packets.programmserver2server;
 
 import de.falco.phoenixgames.packets.Packet;
 import de.falco.phoenixgames.packets.ProgrammServerPacketCode;
-import de.falco.console.pexsystem.ServerStatus;
+import de.falco.phoenixgames.packets.util.ServerStatus;
 
 public class ServerStatusUpdate extends Packet{
 

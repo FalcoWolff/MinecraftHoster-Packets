@@ -2,27 +2,19 @@ package de.falco.phoenixgames.packets.server2script;
 
 import de.falco.phoenixgames.packets.Packet;
 import de.falco.phoenixgames.packets.ScriptClientPacketCode;
+import de.falco.phoenixgames.packets.util.CommandResponseStatus;
 
 public class CommandResponse extends Packet{
 	
-	public enum CommandStatus {
-		
-		success, 
-		nopermission,
-		hostdown,
-		hostrestard;
-		
-	}
+	private CommandResponseStatus status;
 	
-	private CommandStatus CommandStatus;
-	
-	public CommandResponse(CommandStatus reason) {
+	public CommandResponse(CommandResponseStatus status) {
 		super(ScriptClientPacketCode.commandresponse);
-		this.CommandStatus = reason;
+		this.status = status;
 	}
 	
-	public CommandStatus getCommandStatus() {
-		return CommandStatus;
+	public CommandResponseStatus getStatus() {
+		return status;
 	}
 
 }

@@ -3,7 +3,9 @@ package de.falco.phoenixgames.packets.programmserver2server;
 import de.falco.phoenixgames.packets.Packet;
 import de.falco.phoenixgames.packets.ProgrammServerPacketCode;
 import de.falco.phoenixgames.packets.sender.Sender;
+import de.falco.phoenixgames.packets.util.CommandResponseStatus;
 
+@Deprecated
 public class CommandResponse extends Packet{
 	
 	private CommandResponseStatus status;
@@ -15,10 +17,6 @@ public class CommandResponse extends Packet{
 		this.sender = sender;
 		this.cmd = cmd;
 		this.status = status;
-	}
-	
-	public enum CommandResponseStatus {
-		success,noprocess;
 	}
 	
 	public String getCmd() {
