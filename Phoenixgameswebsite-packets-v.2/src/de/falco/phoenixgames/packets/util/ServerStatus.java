@@ -10,5 +10,8 @@ public enum ServerStatus {
 	killExecution, //Programmserver connected | service get killed | blocked commands
 	starting, //Programmserver connected | service boot up | blocked commands
 	connectionLost //Programmserver is not connected
+	;
+	
+	
 	
 }
