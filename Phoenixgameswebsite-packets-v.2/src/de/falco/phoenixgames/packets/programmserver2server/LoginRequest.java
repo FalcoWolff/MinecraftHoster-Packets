@@ -9,13 +9,15 @@ public class LoginRequest extends Packet{
 	private String password;
 	private long maxram;
 	private long maxusage;
+	private int ftpPort;
 	
-	public LoginRequest(int serverid, String password, long maxram, long maxusage) {
+	public LoginRequest(int serverid, String password, long maxram, long maxusage, int ftpPort) {
 		super(ProgrammServerPacketCode.loginrequest);
 		this.serverid = serverid;
 		this.password = password;
 		this.maxram = maxram;
 		this.maxusage = maxusage;
+		this.ftpPort = ftpPort;
 	}
 	
 	public long getMaxram() {
@@ -31,6 +33,10 @@ public class LoginRequest extends Packet{
 		return serverid;
 	}
 	
+	public int getFtpPort() {
+		return ftpPort;
+	}
+	
 	
 	public void setMaxram(long maxram) {
 		this.maxram = maxram;
@@ -44,5 +50,9 @@ public class LoginRequest extends Packet{
 	public void setServerid(int serverid) {
 		this.serverid = serverid;
 	}
-
+	
+	public void setFtpPort(int ftpPort) {
+		this.ftpPort = ftpPort;
+	}
+	
 }
