@@ -27,10 +27,9 @@ public class ServerStatusUpdateRequest extends Packet{
 	public Sender getSender() {
 		return sender;
 	}
+	
 	public void setSender(Sender sender) {
 		this.sender = sender;
 	}
 	
-	
-
 }

@@ -40,6 +40,12 @@ public class PacketDeserializer implements JsonDeserializer<Packet>{
 			clazz = de.falco.phoenixgames.packets.server2programmserver.LoginResponse.class;
 		}else if(packetcode == ProgrammServerPacketCode.serverstatusupdaterequest) {
 			clazz = de.falco.phoenixgames.packets.server2programmserver.ServerStatusUpdateRequest.class;
+		}else if(packetcode == ProgrammServerPacketCode.deleteftpuser) {
+			clazz = de.falco.phoenixgames.packets.server2programmserver.DeleteFtpUser.class;
+		}else if(packetcode == ProgrammServerPacketCode.ftpuserlist) {
+			clazz = de.falco.phoenixgames.packets.server2programmserver.FtpUserList.class;
+		}else if(packetcode == ProgrammServerPacketCode.storeftpuser) {
+			clazz = de.falco.phoenixgames.packets.server2programmserver.StoreFtpUser.class;
 		}
 		
 		if(packetcode == ScriptClientPacketCode.commandrequest) {
